@@ -1,0 +1,79 @@
+<html>
+  
+  <head>
+		<title>Problem 3</title>
+    <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./vendors/css/bootstrap.min.css" />
+		<script src="./vendors/js/jquery-3.2.1.slim.min.js"></script>
+		<script src="./vendors/js/bootstrap.min.js"></script>
+		<script src="./vendors/js/moment.min.js"></script>
+		<script src="./vendors/js/axios.min.js"></script>
+		<script src="./vendors/js/fusioncharts.js"></script>
+		<script src="./vendors/js/fusioncharts.theme.fusion.js"></script>
+  </head>
+
+  <body>
+    <div class="container-fluid my-2">
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Select Week</label>
+            <select class="form-control" id="weeks-select"></select>
+          </div>
+        </div>
+
+        <div class="col-md-4 mt-3">
+          <button class="btn btn-block btn-primary d-none" id="generate-xml">
+            Generate XML
+          </button>
+        </div>
+
+        <div class="col-md-4 mt-3">
+          <button class="btn btn-block btn-primary d-none" id="show-chart">
+            Show Chart
+          </button>
+        </div>
+      </div>
+
+      <div class="row my-3">
+        <div class="col-md-12 text-center">
+          <button class="btn btn-success" id="start-tracking">
+            Start Tracking
+          </button>
+        </div>
+      </div>
+
+      <div class="row my-3">
+        <div class="col-md-12">
+          <div class="table-responsive d-none" id="weather-details-table">
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Day</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Min Temperature</th>
+                  <th scope="col">Max Temperature</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+
+          <div
+            class="alert alert-danger d-none"
+            role="alert"
+            id="weather-details-error"
+          >
+            An error Occurred
+          </div>
+        </div>
+      </div>
+
+      <hr />
+      <div id="chart-container" class="d-none">Chart will render here</div>
+    </div>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
